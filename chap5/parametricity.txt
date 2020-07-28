@@ -1,0 +1,17 @@
+Exercises: Parametricity
+
+All you can really do with a parametrically polymorphic value is pass or not pass it to some other expression. Prove that to yourself with these small demonstrations.
+
+2. We can get a more comfortable appreciation of parametricity by looking at a -> a -> a. This hypothetical function a -> a -> a has two–and only two–implementations. Write both possible versions of a -> a -> a. After doing so, try to violate the constraints of parametrically polymorphic values we outlined above.
+
+f :: a -> a -> a
+f x y = x
+
+g :: a -> a -> a
+g x y = y
+
+3. Implement a -> b -> b. How many implementations can it have? Does the behavior change when the types of 𝑎 and 𝑏 change?
+
+f :: a -> b -> b
+f x y = y
+This is the only implementation, and the behaviour does not change when the types of a and b change.
